@@ -1,0 +1,7 @@
+{
+  "name": "cripto-test-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
