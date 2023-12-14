@@ -3,6 +3,8 @@
 
 /** Ionic CSS Variables **/
 :root {
+
+  --ion-default-font: 'Poppins', sans-serif;
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -74,6 +76,12 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /*margins*/
+
+  --margin-xl: 20px;
+  --margin-l: 15px;
+  --margin-sm: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -233,12 +241,4 @@
 
     --ion-card-background: #1e1e1e;
   }
-}
-
-html {
-  /* 
-   * For more information on dynamic font scaling, visit the documentation:
-   * https://ionicframework.com/docs/layout/dynamic-font-scaling
-   */
-  --ion-dynamic-font: var(--ion-default-dynamic-font);
 }

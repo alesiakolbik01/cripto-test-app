@@ -1,4 +1,139 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    color:red;
+.bg-dark {
+    color:#fff;
+    --background: var(--ion-color-warning-contrast) url('assets/gradient-cloud-img.png') no-repeat top center /contain;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.user-card {
+    --background: trasparent;
+    color: var(--ion-text-color);
+    box-shadow: none;
+}
+
+
+.btn-add-user {
+    background: transparent;
+   
+}
+
+.btn-add-user {
+    --background-hover: red;
+}
+
+ion-card-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+ion-card-header {
+    padding: 0;
+    margin:0;
+    margin-bottom: 6px;
+    margin-left: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+}
+
+ion-col,
+ion-grid {
+    padding-inline-start:0;
+    padding-inline-end: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.btn-view {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    border-radius: 5px;
+    --background: #303236;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    width: 100%;
+}
+
+.btn-add-new {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background: linear-gradient(225deg, #087AFF 21.7%, #72EAB5 100.34%);
+    color: white;
+}
+
+.custom-ripple {
+    color: #27027e;
+}
+
+.btn-add-new img {
+    width: 15px;
+    max-width: fit-content;
+}
+
+.flex {
+    display: flex;
+} 
+
+.flex-justify-content-start {
+    justify-content: flex-start;
+}
+
+.item-xbits img {
+    margin: 6px;
+}
+
+.item-xbits {
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+}
+
+
+.content-margin {
+    --padding-end: 21px;
+    --padding-start: 21px;
+    --padding-top:17px;
+}
+
+.margin-top-xl,
+.margin-bottom-xl {
+    margin-top: var(--margin-xl)
+}
+.margin-top-sm {
+    margin-top: var(--margin-xl)
+}
+
+
+.title-large-light {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;   
 }
