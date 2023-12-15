@@ -1,0 +1,225 @@
+/* competition card*/
+
+.competition-card {
+    --background: #14171A;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.users-list {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ display: flex;
+}
+
+.users-list li:not(:first-child) {
+    margin-left:-5px;
+}
+
+.users-list .user-item{
+    width: 16px;
+    height: 16px;
+}
+
+.users-list-counter {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(43, 46, 48, 1);
+    font-size: 8px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.text-color-grey {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.user-competition-card-info {
+    border-radius: 8px;
+    height: 77px;
+    padding: 8px 11px 11px 11px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.user-competition-card-info .user-name {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#fff;
+}
+
+.user-competition-card-info-wrapper {
+    align-items: center;
+    position: relative;
+}
+
+.user-competition-card-counter {
+    position: absolute;
+    color: rgba(11, 37, 77, 0.2);
+    font-family: Poppins;
+    font-size: 33px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0.04em;
+    top: -17px;
+    left: -5px;
+}
+
+.user-competition-card-counter sup {
+    font-size: 18px;
+}
+
+.user-competition-card-image {
+    display: inline-block;
+    z-index: 0;
+}
+
+.user-data-list-item-number {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.user-data-list-item-description {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.user-data-income-wrapper {
+    color:rgba(136, 255, 199, 1);
+    font-weight: 600;
+}
+
+.user-data-income-amount {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: right;
+    white-space: nowrap;
+    
+}
+
+.user-data-income-percentage {
+    font-size: 10px;
+    line-height: 15px;
+    text-align: right;
+}
+
+.btn-view {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    border-radius: 13px;
+    text-align: center;
+    background: #303236;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    margin: 0;
+    height: 47px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+ion-card-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+ion-card-header {
+    padding: 0;
+    margin:0;
+    margin-bottom: 6px;
+    margin-left: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+}
+
+ion-col,
+ion-grid,
+ion-card,
+ion-card-content {
+    padding-inline-start:0;
+    padding-inline-end: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-inline: 0;
+}
+
+.competition-date {
+    background-color: #261516;
+    border: solid 1px #FF6F6F;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.competition-date-wrapper {
+    color: #FF6F6F;
+}
+
+.creator-info-avatar {
+    display: inline-block;
+}
+
+.competition-info-wrapper {
+    color: #fff;
+}
+
+.x-bits-icon {
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(48, 50, 54, 0.6);
+}
+
+.text-color-grey {
+    color:rgba(255, 255, 255, 0.5)
+}
+
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-8 {
+    font-size: 8px;
+}
+
+.text-align-left {
+    text-align: left;
+}

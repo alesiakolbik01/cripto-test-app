@@ -1,0 +1,135 @@
+<ion-card class="competition-card">
+  <ion-card-header>
+    <div class="flex ion-justify-content-between">
+      <div>
+        <ul class="users-list">
+          <li *ngFor="let user of challenge.participants; index as i">
+            <ion-avatar class="user-item">
+              <img
+                alt="Silhouette of a person's head"
+                src="{{ user.avatar }}"
+              />
+            </ion-avatar>
+          </li>
+          <li>
+            <div class="users-list-counter">
+              {{ challenge.participants.length }}
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div><span *ngIf="challenge.isFinish" class="text-color-grey">Too late to join</span></div>
+    </div>
+  </ion-card-header>
+  <ion-card-title class="margin-top-xl margin-bottom-xl">{{
+    challenge.name
+  }}</ion-card-title>
+  <ion-card-content>
+    <ul class="margin-bottom-xl">
+      <li
+        *ngFor="let participant of challenge.participants; index as i"
+        class="user-competition-card-info margin-bottom-sm"
+        [ngStyle]="{
+          background:
+            participant.income > 0
+              ? 'linear-gradient(90deg, rgba(129, 237, 186, 0) 0%, rgb(84, 255, 174, 0.15) 100%), url(assets/img/bg-' +
+                (i + 1) +
+                '.png) no-repeat'
+              : 'linear-gradient(90deg, rgba(255, 111, 111, 0) 0%, rgba(255, 111, 111, 0.15) 100%), url(assets/img/bg-' +
+                (i + 1) +
+                '.png) no-repeat'
+        }"
+      >
+        <div class="user-competition-card-info-wrapper flex">
+          <span class="user-competition-card-counter"
+            >{{ i + 1 }}<sup>{{ numberToOrdinal(i + 1) }}</sup></span
+          >
+          <img
+            class="user-competition-card-image margin-right-l"
+            src="{{ participant.avatar }}"
+            alt="Silhouette of a person's head"
+          />
+          <div class="flex flex-column">
+            <div class="user-name-wrapper">
+              <h1 class="user-name">{{ participant.userName }}</h1>
+              <img
+                src="assets/icon/check-icon-blue.png"
+                alt=""
+                *ngIf="participant.verified"
+              />
+            </div>
+            <div class="user-data-list flex">
+              <div class="user-data-list-wrapper flex">
+                <div class="user-data-list-item margin-right-sm">
+                  <div class="user-data-list-item-number">
+                    {{ participant.alerts }}
+                  </div>
+                  <div class="user-data-list-item-description">Alerts</div>
+                </div>
+                <div class="user-data-list-item margin-right-sm">
+                  <div class="user-data-list-item-number">
+                    {{ participant.winRate }}%
+                  </div>
+                  <div class="user-data-list-item-description">Win Rate</div>
+                </div>
+                <div class="user-data-list-item margin-right-sm">
+                  <div class="user-data-list-item-number">
+                    {{ participant.yield }}%
+                  </div>
+                  <div class="user-data-list-item-description">Yield</div>
+                </div>
+              </div>
+              <div
+                class="user-data-income-wrapper"
+                [ngStyle]="{ color: participant.income < 0 ? '#FF6F6F' : '' }"
+              >
+                <div class="user-data-income-amount">
+                  {{
+                    participant.income > 0
+                      ? "+ " + formattedNumber(participant.income)
+                      : formattedNumber(participant.income)
+                  }}
+                </div>
+                <div class="user-data-income-percentage">
+                  {{ participant.percentage }}%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="competition-info-wrapper flex ion-align-items-center ion-justify-content-between">
+      <div class="creator-info-name-wrapper flex ion-align-items-center">
+        <img src="{{ challenge.creator.avatar }}" alt="avatar" class="creator-info-avatar margin-right-sm" />
+        <div class="margin-right-sm">
+          <div class="flex ion-align-items-center">{{ challenge.creator.userName }}</div>
+          <div class="text-color-grey fs-8 text-align-left">{{ challenge.creator.userNickname }}</div>
+        </div>
+        <img src="assets/icon/x-bit-circle-icon.png" alt="x-bits"  class="x-bits-icon margin-right-sx"/>
+        <div class="margin-right-sm">
+          <div>{{numberWithSpaces(challenge.amount)}}</div>
+          <div class="text-color-grey fs-8">&#64;xBits prize</div>
+        </div>
+      </div>
+      <div *ngIf="challenge.isFinish" class="flex ion-align-items-center">
+          <div class="competition-date-wrapper flex ion-justify-content-center ion-align-items-center">
+            <div class="competition-date margin-right-sx">3</div>
+            <div>
+              <div>Days</div>
+              <div>past</div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div
+      class="btn-view margin-top-xl ion-activatable ripple-parent rounded-rectangle flex-center"
+    >
+      View
+      <ion-ripple-effect
+        type="unbounded"
+        class="custom-ripple"
+      ></ion-ripple-effect>
+    </div>
+  </ion-card-content>
+</ion-card>

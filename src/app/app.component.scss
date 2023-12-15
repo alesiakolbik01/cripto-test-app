@@ -1,3 +1,7 @@
 .bg-black {
     --background:var( --ion-color-light-contrast);
 }
+
+* {
+    font-family: var(--ion-default-font);
+}

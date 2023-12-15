@@ -2,41 +2,51 @@
   <ion-grid>
     <ion-row>
       <ion-col class="flex-center">
-        <img alt="Silhouette of a person's head" src="assets/icon/status-bar-mock.png"/>
+        <img
+          alt="Silhouette of a person's head"
+          src="assets/icon/status-bar-mock.png"
+        />
       </ion-col>
     </ion-row>
     <ion-row class="margin-top-xl">
       <ion-col class="flex-center flex-justify-content-start">
         <ion-avatar class="user-avatar">
-          <img alt="Silhouette of a person's head" src="assets/icon/user-icon.png" />
+          <img
+            alt="Silhouette of a person's head"
+            src="assets/icon/user-icon.png"
+          />
         </ion-avatar>
         <ion-card class="user-card">
           <ion-card-header>
             <ion-card-title>Alex G</ion-card-title>
           </ion-card-header>
           <ion-card-title class="flex">
-            <div class="item-xbits"><img src="assets/icon/x-icon.png" alt=""/><span>3000 xBits</span></div>
-            <div class="item-xbits"><img src="assets/icon/crown-icon.png" alt=""/><span>85</span></div>
+            <div class="item-xbits">
+              <img src="assets/icon/x-icon.png" alt="" /><span>3000 xBits</span>
+            </div>
+            <div class="item-xbits">
+              <img src="assets/icon/crown-icon.png" alt="" /><span>85</span>
+            </div>
           </ion-card-title>
         </ion-card>
       </ion-col>
       <ion-col size="auto" class="flex-center">
-        <button class="btn-add-user"><img src="assets/icon/add-user-btn.png" alt="add-user"/></button>
+        <button class="btn-add-user">
+          <img src="assets/icon/add-user-btn.png" alt="add-user" />
+        </button>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-  <ion-label class="title-large-light margin-top-xl margin-bottom-xl">Competitions</ion-label>
+  <ion-label class="title-large-light margin-top-xl margin-bottom-xl"
+    >Competitions</ion-label
+  >
+  <app-user-competition *ngFor="let challenge of getWeeklyChallengies()" [challenge]="challenge"></app-user-competition>
   
-  <ion-button class="btn-view">View</ion-button>
-
   <div class="btn-add-new flex-center ion-activatable ripple-parent circle">
-    <img src="assets/icon/plus-icon.png"/>
-    <ion-ripple-effect type="unbounded" class="custom-ripple"></ion-ripple-effect>
+    <img src="assets/icon/plus-icon.png" />
+    <ion-ripple-effect
+      type="unbounded"
+      class="custom-ripple"
+    ></ion-ripple-effect>
   </div>
-  <!-- <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
-  </ion-list> -->
 </ion-content>
